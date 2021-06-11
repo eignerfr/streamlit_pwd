@@ -62,7 +62,7 @@ http {
       # The path to .htpasswd needs to be absolute (assume Heroku's filesystem)
       location / {
           auth_basic           "closed site";
-          auth_basic_user_file /app/.htpasswd;
+          auth_basic_user_file /app/htpasswd;
           proxy_pass http://127.0.0.1:8501/;
       }
    }
